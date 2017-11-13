@@ -1,0 +1,37 @@
+flyway:
+  validate-on-migrate: false
+  enabled: false
+
+spring:
+#    jpa:
+#        show-sql: false
+#        generate-ddl: false
+#    datasource:
+#        driver-class-name: com.mysql.jdbc.Driver
+#        url: jdbc:mysql://localhost/db?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#        sql-script-encoding: UTF-8
+#        username: user
+#        password: pass
+#        hikari:
+#            connection-timeout: 60000
+#            maximum-pool-size: 5 
+    jackson:
+        date-format: yyyy-MM-dd'T'HH:mm:ssXXX
+        time-zone: GMT
+        default-property-inclusion: NON_NULL        
+    http:
+        multipart:
+            file-size-threshold: 512KB
+            max-file-size: 10MB
+            max-request-size: 10MB
+
+springfox:
+    documentation:
+        swagger:
+            v2:
+                path: /swagger.json
+
+logging:
+    level:
+        org:
+            apache: ERROR
