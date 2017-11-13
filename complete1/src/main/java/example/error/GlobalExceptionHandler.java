@@ -164,18 +164,6 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * Error.
-     *
-     * @param status the status
-     * @param message the message
-     * @return the response entity
-     */
-    private ResponseEntity<ErrorResponse> error(HttpStatus status) {
-        ErrorResponse error = new ErrorResponse(status.value(), status.getReasonPhrase(), null);
-        return new ResponseEntity<>(error, status);
-    }
-
-    /**
      * HTTP Client Error.
      *
      * @param request the request
